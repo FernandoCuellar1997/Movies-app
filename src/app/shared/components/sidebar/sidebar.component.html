@@ -1,0 +1,10 @@
+<div class="bg-dark border-right p-3" id="sidebar">
+  <h3 class="text-light">Movies</h3>
+  <hr class="text-white">
+
+  <div class="list-group list-reset">
+    <button *ngFor="let movie of historyMovies" class="list-group-item list-group-item-action">
+      {{movie | titlecase}}
+    </button>
+  </div>
+</div>
