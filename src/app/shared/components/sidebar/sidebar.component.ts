@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { MovieService } from '../../../movies/services/MovieService.service';
 
 @Component({
@@ -12,6 +12,10 @@ export class SidebarComponent {
 
   get historyMovies():string[]{
     return this.moviesService.moviesList;
+  }
+
+  sendButtonBusqueda(movie:string):void{
+    this.moviesService.saveMovie(movie)
   }
 
 }
