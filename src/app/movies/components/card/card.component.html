@@ -1,7 +1,7 @@
 
 <button class="" (click)="seeSinopsis()">
   <div  *ngIf="bandera; else sinopsis" class="text-center card mb-2 bg-dark">
-    <img [src]="movie.poster_path" [alt]="movie.title" class="card-img" width="200px">
+    <shared-lazy-image [url]="movie.poster_path" [alt]="movie.title" [mostrarSvg]="mostrarAnimacion"></shared-lazy-image>
     <div class="card-body text-white">
       <p class="card-text">{{movie.title}}</p>
     </div>

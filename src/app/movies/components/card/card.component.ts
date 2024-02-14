@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, Output, ViewChild } from '@angular/core';
 import { Movie, Result } from '../../interfaces/movie.interface';
 
 @Component({
@@ -11,6 +11,9 @@ export class CardComponent {
   @Input()
   public movie!:Result;
 
+  @Output()
+  public mostrarAnimacion:boolean=true;
+
   public contador:number=0;
   public bandera:boolean=true;
   seeSinopsis():void{
@@ -22,5 +25,6 @@ export class CardComponent {
       this.bandera=true;
     }
     this.contador+=1;
+    this.mostrarAnimacion=false;
   }
 }
